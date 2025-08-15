@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="toggle-menu" id="menuToggle" aria-label="Menu">&#9776;</div>
+      <nav id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#features">Features</a>
+        <a href="#showcase">3D</a>
+      </nav>
+      <button id="themeToggle" title="Toggle theme">🌙</button>
+    </div>
+
+    <div class="weather-clock">
+      <div id="weather">Loading weather...</div>
+      <div id="clock">--:--</div>
+    </div>
+
+    <div class="profile-frame">
+      <img src="https://wallpapers.com/images/hd/free-fire-criminal-bundle-smiling-violet-character-u02rhyy04qp72l9c.jpg" alt="Profile" class="profile-pic" />
+    </div>
+
+    <h1 class="title">Asutosh Mishra</h1>
+    <p class="subtitle">Creative Developer & Designer</p>
+
+    <div class="socials">
+      <a href="https://www.facebook.com/me/" target="_blank" title="Facebook">FB</a>
+      <a href="https://www.instagram.com/itzz_me_asu_256" target="_blank" title="Instagram">IG</a>
+      <a href="https://www.youtube.com/@saugamming1209" target="_blank" title="YouTube">YT</a>
+      <a href="https://twitter.com/AsutoshM1209" target="_blank" title="Twitter">TW</a>
+      <a href="https://www.threads.net/@itzz_me_asu_256" target="_blank" title="Threads">TH</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- YouTube Highlight (new) -->
+    <section id="youtube" class="card youtube-card" aria-label="YouTube channel highlight">
+      <div class="yt-inner">
+        <div class="yt-text">
+          <h2>Watch & Subscribe — <span class="channel">saugamming1209</span></h2>
+          <p>Gaming highlights, streams and dev content. Subscribe for weekly uploads and live sessions.</p>
+
+          <div class="yt-cta">
+            <a class="btn btn-sub" href="https://www.youtube.com/@saugamming1209" target="_blank" rel="noopener">Visit Channel</a>
+
+            <!-- YouTube subscribe button (Google platform) -->
+            <div class="g-ytsubscribe" data-channel="saugamming1209" data-layout="full" data-count="default" aria-hidden="false"></div>
+          </div>
+        </div>
+
+        <a class="yt-thumb" href="https://www.youtube.com/@saugamming1209" target="_blank" rel="noopener" aria-hidden="false">
+          <img src="https://wallpapers.com/images/hd/free-fire-criminal-bundle-smiling-violet-character-u02rhyy04qp72l9c.jpg" alt="saugamming1209" />
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+
+      <p class="lead">
+        I'm Asutosh — a creative developer who crafts vibrant, immersive web experiences that blend sleek design with fast, reliable code.
+      </p>
+
+      <p>
+        I build interactive projects, stream gaming & dev content on YouTube (saugamming1209), and love turning bold ideas into memorable digital moments.
+      </p>
+
+      <ul class="about-highlights" aria-hidden="false">
+        <li>✨ Design-first approach — polished UI, attention to micro-interactions</li>
+        <li>⚡ Performance-minded — optimized load, smooth animations</li>
+        <li>🎮 Game-inspired creativity — playful visuals, strong storytelling</li>
+        <li>🔧 Practical tooling — modern JS, accessible HTML, responsive CSS</li>
+      </ul>
+
+      <div class="about-chips" aria-hidden="false">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">3D / model-viewer</span>
+        <span class="chip">Live Streaming</span>
+      </div>
+
+      <p class="about-cta">
+        Want to see my work? <a href="#showcase">Explore the 3D showcase</a> • Watch me on YouTube:
+        <a href="https://www.youtube.com/@saugamming1209" target="_blank" rel="noopener">saugamming1209</a>
+        • <a href="mailto:your.email@example.com">Hire / Collaborate</a>
+      </p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills & Experience</h2>
+
+      <p class="lead">Gaming-first developer — I fuse competitive gameplay intuition with practical web development to build immersive, fast, and viewer-friendly experiences.</p>
+
+      <ul class="skill-highlights">
+        <li>🎮 Competitive Gamer — 5+ years playing & streaming Free Fire; expert in map control, rotation timing, and clutch decision-making.</li>
+        <li>🔥 Free Fire Tips & Tricks — positioning, recoil management, loot prioritization, smart zone-play, and end‑game strategies.</li>
+        <li>🛠️ Game-aware Web Dev — building stream overlays, live dashboards, highlight reels, and low-latency interactive pages.</li>
+        <li>⚡ Performance & UX — optimized UIs, crisp visuals, micro-interactions, and responsive layouts tailored for viewers.</li>
+        <li>📈 Community & Growth — content planning, highlight editing, collabs, and audience engagement to grow a loyal fanbase.</li>
+      </ul>
+
+      <div class="skill-chips">
+        <span class="chip">Free Fire Strategy</span>
+        <span class="chip">Clutch Mechanics</span>
+        <span class="chip">Stream Overlays</span>
+        <span class="chip">Realtime UX</span>
+        <span class="chip">5+ Years Experience</span>
+      </div>
+
+      <p class="about-cta">
+        Hungry for more? <a href="https://www.youtube.com/@saugamming1209" target="_blank" rel="noopener">Watch tutorials & live matches</a> • <a href="mailto:your.email@example.com">Collaborate / Hire</a>
+      </p>
+    </section>
+
+    <section id="features" class="card">
+      <h2>Features</h2>
+      <ul>
+        <li>Responsive & Dark/Light Theme</li>
+        <li>Interactive 3D showcase</li>
+        <li>Sticky header + quick Jarvis assistant</li>
+      </ul>
+    </section>
+
+    <!-- Vibrant 3D Showcase -->
+    <section id="showcase" class="card showcase">
+      <h2 class="neon">Explore My 3D World</h2>
+      <p class="muted">Interact with the models — rotate & zoom.</p>
+
+      <div class="models" aria-live="polite">
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Astronaut"
+          auto-rotate camera-controls style="width:240px; height:240px;"></model-viewer>
+
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" alt="Robot"
+          auto-rotate camera-controls style="width:240px; height:240px;"></model-viewer>
+
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/Car.glb" alt="Car"
+          auto-rotate camera-controls style="width:240px; height:240px;"></model-viewer>
+
+        <!-- local OBJ viewer (Three.js will insert a canvas here) -->
+        <div id="objViewer" aria-label="Local OBJ viewer" title="3D OBJ model">
+          <div class="obj-fallback">Place model.obj (and optional model.mtl + textures) in repo root.</div>
+        </div>
+      </div>
+
+      <p class="accent">Vibrant visuals, real-time interaction.</p>
+    </section>
+
+    <!-- Jarvis-style quick assistant -->
+    <aside class="jarvis-card">
+      <div id="jarvisAgent" role="button" tabindex="0" title="Ask Jarvis">
+        <img id="jarvisIcon" src="https://www.pngmart.com/files/3/Iron-Man-Head-PNG-HD.png" alt="Jarvis" />
+        <div>Ask Jarvis</div>
+      </div>
+      <div id="jarvisResponse">Jarvis: Awaiting command...</div>
+    </aside>
+
+    <!-- Chat widget (movable + minimizable + WhatsApp) -->
+    <div id="chatWidget" class="chat-widget" role="dialog" aria-hidden="true">
+      <div id="chatPanel" class="chat-panel" hidden>
+        <header class="chat-header" id="chatHandle" aria-label="Drag to move">
+          <div>
+            <strong>Chat with Asutosh</strong>
+            <div class="chat-sub">Live replies via WhatsApp</div>
+          </div>
+          <div class="chat-controls">
+            <button id="chatMinimize" aria-label="Minimize" title="Minimize">━</button>
+            <button id="chatClose" aria-label="Close" title="Close">✕</button>
+          </div>
+        </header>
+
+        <div class="chat-body">
+          <input id="chatName" type="text" placeholder="Your name (optional)" />
+          <textarea id="chatMessage" rows="4" placeholder="Write a message to Asutosh..."></textarea>
+        </div>
+
+        <footer class="chat-footer">
+          <button id="chatSend" class="btn-send">Send to WhatsApp</button>
+          <small class="chat-hint">Opens WhatsApp (web or app). Messages optionally POST to server if configured.</small>
+        </footer>
+      </div>
+
+      <button id="chatToggle" class="chat-toggle" aria-label="Open chat" title="Chat">💬</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Asutosh Mishra. All Rights Reserved.</p>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" title="Scroll to top">⬆️</button>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

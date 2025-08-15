@@ -1,0 +1,563 @@
+:root{
+  --bg-color: rgba(10,12,30,0.75);
+  --card: rgba(255,255,255,0.06);
+  --accent: #00e676;
+  --accent-2: #ff9800;
+  --glass: rgba(255,255,255,0.06);
+  --text: #e9eef8;
+}
+
+/* Background uses local image gugu.jpg (place it in the same folder) */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url('gugu.jpg') center/cover no-repeat fixed;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+header{
+  padding:24px;
+  text-align:center;
+  position:relative;
+  backdrop-filter: blur(6px);
+}
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  max-width:1100px;
+  margin:0 auto 12px;
+}
+
+#navLinks a{
+  color:var(--text);
+  margin:0 8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.toggle-menu{display:none;}
+
+.weather-clock{
+  position:absolute;
+  right:18px;
+  top:18px;
+  text-align:right;
+  font-size:14px;
+  color:#fff;
+}
+
+/* Profile */
+.profile-frame{
+  display:inline-block;
+  padding:6px;
+  border-radius:14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
+.profile-pic{
+  width:120px;
+  height:120px;
+  border-radius:12px;
+  object-fit:cover;
+  display:block;
+}
+
+/* Title */
+.title{
+  margin:10px 0 4px;
+  font-size:28px;
+  letter-spacing:0.6px;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+.subtitle{color:#cfe9ff; margin-top:0; margin-bottom:12px;}
+
+/* Socials */
+.socials a{
+  display:inline-block;
+  margin:6px;
+  padding:6px 10px;
+  border-radius:8px;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  color:#001;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Main cards */
+main{max-width:1100px;margin:24px auto;padding:0 18px;}
+.card{
+  background:var(--glass);
+  border-radius:12px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* Showcase */
+.showcase .models{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.neon{
+  color: #fff;
+  background: linear-gradient(90deg, #ff4081, #7c4dff, #00e676);
+  -webkit-background-clip: text;
+  background-clip:text;
+  color:transparent;
+  font-size:1.6rem;
+  letter-spacing:1px;
+}
+.muted{opacity:0.9;}
+.accent{color:var(--accent);font-weight:700;margin-top:8px;}
+
+/* Jarvis */
+.jarvis-card{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+#jarvisAgent{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#111827, rgba(255,255,255,0.02));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+#jarvisAgent img{width:48px;height:48px;border-radius:8px;}
+#jarvisResponse{min-width:240px;padding:10px 12px;border-radius:10px;background:#071025;color:#bfe9ff;}
+
+/* Scroll top */
+.scroll-top{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  border:none;
+  padding:10px 12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#00e676,#ff9800);
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(0,0,0,0.45);
+  display:none;
+}
+
+/* YouTube highlight styles */
+.youtube-card {
+  display:block;
+  background: linear-gradient(135deg, rgba(255,40,84,0.08), rgba(124,77,255,0.04));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding:18px;
+  margin-bottom:20px;
+}
+
+.youtube-card .yt-inner {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.youtube-card .yt-text { max-width:720px; text-align:left; }
+.youtube-card h2 { margin:0 0 6px; font-size:1.5rem; }
+.youtube-card .channel { background:linear-gradient(90deg,#ff3a3a,#ff9800); -webkit-background-clip:text; color:transparent; font-weight:800; }
+
+.youtube-card .yt-cta { display:flex; gap:12px; align-items:center; margin-top:8px; }
+.btn { display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700; }
+.btn-sub {
+  background: linear-gradient(90deg,#ff0000,#ff4500);
+  color:#fff;
+  box-shadow: 0 8px 24px rgba(255,69,0,0.12);
+}
+
+/* thumbnail */
+.youtube-card .yt-thumb img{
+  width:220px;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* responsive */
+@media (max-width:820px){
+  .youtube-card .yt-inner { flex-direction:column-reverse; align-items:center; }
+  .youtube-card .yt-text { text-align:center; }
+  .youtube-card .yt-thumb img { width:90%; height:auto; }
+}
+
+/* Responsive */
+@media (max-width:700px){
+  .toggle-menu{display:block;}
+  #navLinks{display:none;flex-direction:column;background:rgba(0,0,0,0.35);position:absolute;left:10px;top:54px;padding:10px;border-radius:8px;}
+  .navbar{padding:6px;}
+}
+
+/* Light theme (applied on documentElement) */
+.light {
+  --bg-color: rgba(255,255,255,0.85);
+  --card: rgba(0,0,0,0.06);
+  --glass: rgba(12,18,30,0.03);
+  --accent: #00796b;
+  --accent-2: #ff9800;
+  --btn-bg: linear-gradient(90deg,#ffffff,#f1f5fb);
+  --btn-color: #0b1320;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,255,0.90));
+  --card-border: rgba(10,20,30,0.06);
+  --sheen: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.35));
+  --glass-shadow: 0 10px 40px rgba(10,20,30,0.06);
+}
+.light body{ color:#0b1320;}
+
+/* --- Glossy theme polish & toggle styling --- */
+
+/* UI transition for smooth theme changes */
+:root,
+.light {
+  transition: color .28s ease, background .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+/* New variables (light overrides already handled by .light) */
+:root{
+  --btn-bg: linear-gradient(90deg,#1f2937,#0f1724);
+  --btn-color: #e9eef8;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  --card-border: rgba(255,255,255,0.06);
+  --sheen: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
+  --glass-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+/* Light mode variable tweaks */
+.light {
+  --btn-bg: linear-gradient(90deg,#ffffff,#f1f5fb);
+  --btn-color: #0b1320;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,255,0.8));
+  --card-border: rgba(15,20,30,0.06);
+  --sheen: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.35));
+  --glass-shadow: 0 10px 40px rgba(10,20,30,0.06);
+  color: #0b1320;
+}
+
+/* Make cards glossy and enable sheen pseudo-element */
+.card{
+  position:relative; /* for sheen pseudo-element */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: background .28s ease, box-shadow .28s ease, border-color .28s ease;
+  box-shadow: var(--glass-shadow);
+}
+
+/* subtle glossy highlight */
+.card::before{
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: -60%;
+  width: 180%;
+  height: 120%;
+  background: var(--sheen);
+  transform: rotate(-18deg);
+  opacity: 0.12;
+  pointer-events: none;
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+/* Slightly reduce sheen on small screens */
+@media (max-width:700px){
+  .card::before{ opacity: .07; }
+}
+
+/* profile-frame glossy */
+.profile-frame{
+  position: relative;
+  transition: transform .22s ease, box-shadow .3s ease;
+}
+.profile-frame::after{
+  content: "";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Theme toggle button (🌙) styling */
+#themeToggle{
+  width:44px;
+  height:36px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  font-size:18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 8px 26px rgba(2,6,23,0.45);
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .22s ease, background .28s ease, color .28s ease;
+  backdrop-filter: blur(6px) saturate(120%);
+}
+#themeToggle:hover{ transform: translateY(-3px); box-shadow: 0 14px 40px rgba(2,6,23,0.55); }
+.light #themeToggle{ box-shadow: 0 8px 20px rgba(15,20,30,0.06); border:1px solid rgba(10,20,40,0.04); }
+
+/* pressed / active feel */
+#themeToggle:active{ transform: translateY(0); opacity:.95; }
+
+/* Animated theme toggle icon */
+#themeToggle { /* keep existing styling, add relative context */ position:relative; overflow:hidden; }
+#themeToggle .toggle-icon{
+  display:inline-block;
+  width:28px;
+  height:28px;
+  position:relative;
+  line-height:28px;
+}
+#themeToggle .toggle-icon span{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  transition: transform .36s cubic-bezier(.2,.9,.2,1), opacity .28s ease;
+  will-change: transform, opacity;
+  pointer-events:none;
+}
+#themeToggle .toggle-icon .sun{
+  transform: scale(.5) translateY(6px);
+  opacity:0;
+  filter: drop-shadow(0 6px 14px rgba(255,200,80,0.12));
+}
+#themeToggle .toggle-icon .moon{
+  transform: scale(1) translateY(0);
+  opacity:1;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+}
+
+/* state when light theme active */
+#themeToggle.is-light .toggle-icon .sun{
+  transform: scale(1) translateY(0);
+  opacity:1;
+}
+#themeToggle.is-light .toggle-icon .moon{
+  transform: scale(.6) translateY(-6px) rotate(-12deg);
+  opacity:0;
+}
+
+/* small glow for light mode */
+#themeToggle.is-light{
+  box-shadow: 0 10px 30px rgba(124,77,255,0.08), inset 0 2px 8px rgba(255,255,255,0.06);
+}
+
+/* focus visible */
+#themeToggle:focus{ outline: none; box-shadow: 0 8px 28px rgba(124,77,255,0.14); border-color: rgba(124,77,255,0.25); }
+
+/* glossy micro effects for socials & chips */
+.socials a,
+.chip,
+.skill-chips .chip {
+  transition: transform .18s ease, box-shadow .22s ease, background .28s ease;
+  will-change: transform;
+}
+.socials a:hover,
+.chip:hover,
+.skill-chips .chip:hover{
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+}
+
+/* make model-viewer containers slightly glossy */
+.showcase model-viewer{
+  border-radius:12px;
+  padding:6px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.showcase model-viewer:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
+
+/* accessibility: focus outline with subtle glow */
+.show-focus :focus{
+  outline: 2px solid rgba(124,77,255,0.9);
+  outline-offset: 4px;
+  box-shadow: 0 6px 22px rgba(124,77,255,0.12);
+}
+
+/* ensure body transitions for bg change (light/dark) */
+html, body {
+  transition: background .35s ease, color .28s ease;
+}
+
+#objViewer{
+  width:320px;
+  height:320px;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+#objViewer .obj-fallback{
+  padding:12px;
+  color:var(--text);
+  opacity:0.92;
+  font-size:0.95rem;
+  text-align:center;
+}
+
+/* --- Light mode overrides (applies when <html> has class="light") --- */
+html.light {
+  /* Variables tuned for light mode */
+  --text: #0b1320;
+  --card: rgba(0,0,0,0.06);
+  --glass: rgba(12,18,30,0.03);
+  --accent: #00796b;
+  --accent-2: #ff9800;
+  --btn-bg: linear-gradient(90deg,#ffffff,#f1f5fb);
+  --btn-color: #0b1320;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,255,0.90));
+  --card-border: rgba(10,20,30,0.06);
+  --sheen: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.35));
+  --glass-shadow: 0 10px 40px rgba(10,20,30,0.06);
+}
+
+/* Make body/background lighter in light mode while keeping your gugu.jpg */
+html.light, html.light body {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.85)),
+    url('gugu.jpg') center/cover no-repeat fixed;
+  color: var(--text);
+}
+
+/* Ensure cards and other UI use the light-mode variables */
+html.light .card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Theme toggle button uses variables */
+html.light #themeToggle {
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border: 1px solid rgba(10,20,30,0.04);
+  box-shadow: 0 8px 20px rgba(10,20,30,0.06);
+}
+
+/* Adjust social/chips hover contrast in light mode */
+html.light .socials a,
+html.light .chip,
+html.light .skill-chips .chip{
+  color: var(--btn-color);
+  border: 1px solid rgba(10,20,30,0.03);
+}
+
+/* Make neon text readable in light mode (fallback gradient text) */
+html.light .neon {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.06));
+}
+
+/* Small tweak: ensure focus glow adapts */
+html.light .show-focus :focus {
+  outline: 2px solid rgba(124,77,255,0.18);
+  box-shadow: 0 6px 18px rgba(124,77,255,0.06);
+}
+
+/* Chat widget */
+.chat-widget{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  width:320px;
+  max-width:calc(100vw - 40px);
+  transition: transform .18s ease;
+  touch-action: none; /* allow pointer dragging on touch */
+}
+.chat-widget.moved{ right:auto; bottom:auto; } /* when positioned with left/top */
+
+.chat-toggle{
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width:56px;height:56px;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(90deg,#00e676,#ff9800);box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  color:#001;font-size:22px;
+  z-index:10000;
+}
+
+/* panel */
+.chat-panel{
+  width:320px;
+  max-width:calc(100vw - 40px);
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--card-bg, rgba(8,10,20,0.85));
+  box-shadow:0 18px 50px rgba(0,0,0,0.55);
+  display:flex;flex-direction:column;
+  transform-origin: bottom right;
+}
+
+/* header/drag handle */
+.chat-header{
+  display:flex;align-items:center;justify-content:space-between;padding:10px 12px;cursor:grab;
+  user-select:none;border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.chat-header:active{ cursor:grabbing; }
+.chat-controls button{
+  margin-left:6px;padding:6px 8px;border-radius:8px;border:none;background:transparent;color:var(--text);cursor:pointer;font-weight:700;
+}
+
+/* body/footer */
+.chat-body{padding:12px;display:flex;flex-direction:column;gap:8px}
+.chat-body input, .chat-body textarea{
+  width:100%;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);color:var(--text);
+}
+.chat-footer{padding:10px 12px;border-top:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
+.btn-send{padding:8px 12px;border-radius:8px;border:none;background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;cursor:pointer;font-weight:700}
+.chat-hint{font-size:0.75rem;color:rgba(255,255,255,0.7)}
+
+/* minimized state: only show thin bar */
+.chat-widget.minimized{
+  width:180px;
+  max-width:calc(100vw - 40px);
+}
+.chat-widget.minimized .chat-panel{
+  height:46px;
+  overflow:hidden;
+  display:block;
+}
+.chat-widget.minimized .chat-header{ cursor:grab; }
+
+/* hide the big toggle when panel open (optional) */
+.chat-panel[hidden] + .chat-toggle{ display:block; }
+@media (max-width:520px){
+  .chat-widget{ width:90vw; left:5vw; right:auto; bottom:12px; }
+  .chat-panel{ max-width:100%; }
+}
